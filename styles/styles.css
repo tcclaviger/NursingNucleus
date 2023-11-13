@@ -1,0 +1,419 @@
+/*****************************/
+/* CUSTOM VARIABLES **********/
+:root {
+    --background-color: white;
+    --bg-color-mobile-nav: #6f9f50;
+    --placeholder-color: #b0b0b0;
+
+    /* Survey page colors */
+    --survey-bg-color: white;
+    --survey-border-color: #dde0e5;
+    --survey-font-color: black;
+    --experience-bg-color: white;
+    --experience-border-color: #dde0e5;
+    --experience-font-color: black;
+
+    /* Contact page colors */
+    --contact-bg-color: white;
+    --contact-border-color: #dde0e5;
+    --contact-font-color: black;
+
+    /*Button formatting */
+    --btn-bg-color: rgba(58, 131, 73, 0.9);
+    --btn-border: none;
+    --btn-text-color:white;
+    --btn-bg-color-hover: rgb(58, 131, 73);
+
+    /* Requirements accordion*/
+    --bs-accordion-bg-two: #F1F7ED;
+    --bs-accordion-color-two: #000000;
+
+    /* Receipt */
+    --receipt-bg-color: white;
+    
+    /* Entries Table*/
+    --table-seperator-color: black;
+    
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--contact-font-color);
+}
+
+#nav-top {
+    background-color: #204527;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: #69B344;
+}
+
+#nav-top nav a {
+    color: white;
+}
+
+#nav-top nav a:hover {
+    color: #afadad;
+    cursor: pointer;
+}
+
+#mobile-nav-bottom {
+    background-color: var(--bg-color-mobile-nav);
+    border-top: 1px;
+    border-top-style: solid;
+    border-color: #69B344;
+}
+
+#experience-container, #contact-form-btn, #requirement-container, #survey-form-container {
+    margin-bottom: 100px;
+}
+
+.form-group ::placeholder {
+    color: var(--placeholder-color);
+}
+
+.form-control:focus {
+    border-color: transparent;
+}
+
+/*****************************/
+/* DARKMODE ******************/
+
+.dark-mode {
+    /*--background-color: #050d07;*/
+    --background-color: #23272d;
+    --bg-color-mobile-nav: #233b23;
+
+    --contact-bg-color: rgba(47, 52, 59, 0.82);
+    --contact-border-color: #737373;
+    --contact-font-color: white;
+    --placeholder-color: #6e6e6e;
+
+    --survey-bg-color: rgba(47, 52, 59, 0.82);
+    --survey-border-color: #737373;
+    --survey-font-color: white;
+    --score-color: darkseagreen;
+
+    --experience-bg-color: rgba(47, 52, 59, 0.82);
+    --experience-border-color: #737373;
+    --experience-font-color: white;
+
+    --btn-bg-color: rgba(137, 218, 82, 0.9);
+    --btn-border-color:#89da52;
+    --btn-text-color:black;
+    --btn-text-color-hover: white;
+    --btn-bg-color-hover: #89da52;
+
+    --bs-accordion-bg-two: #2d3139;
+    --bs-accordion-color-two: #FFFFFF;
+
+    /* Receipt */
+    --receipt-bg-color: rgb(45, 49, 56);
+    
+    /* Entries Table*/
+    --table-seperator-color: #A8D08D;
+}
+
+#darkmode-toggler {
+    fill: white;
+}
+
+#darkmode-toggler:hover {
+    fill: #afadad;
+    cursor: pointer;
+}
+
+/*****************************/
+/* Buttons **************/
+
+#survey-form-btn, #experience-form-btn, #contact-form-btn {
+    justify-self: center;
+    width: 150px;
+}
+
+#contact-form-btn, #experience-form-btn, #survey-form-btn, #receipt-btn, #viewEntriesDropdown-btn, .modal-btn{
+    background-color: var(--btn-bg-color);
+    border: var(--btn-border);
+    color: var(--btn-text-color);
+}
+
+.modal-btn:hover{
+    background-color: var(--btn-bg-color-hover);
+    color: var(--btn-text-color-hover);
+}
+
+#submit{
+    background-color: var(--btn-bg-color);
+    border: var(--btn-border);
+    color: var(--btn-text-color);
+    font-weight: bold;
+    width: 150px;
+}
+
+#back{
+    background-color: #B80F0A;
+    border: var(--btn-border);
+    color: var(--btn-text-color);
+    font-weight: bold;
+    width: 150px;
+}
+
+#contact-form-btn:hover,
+#experience-form-btn:hover,
+#survey-form-btn:hover,
+#receipt-btn:hover{
+    background-color: var(--btn-bg-color-hover);
+}
+
+/*****************************/
+/* CONTACT FORM **************/
+
+#contact-form label {
+    width: 100%;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid solid none solid;
+    border-radius: 12px 12px 0 0;
+}
+
+#contact-form input {
+    border-radius: 0 0 12px 12px;
+    padding: 10px;
+}
+
+#message {
+    resize: none;
+    border-radius: 0 0 12px 12px;
+}
+
+#contact-form label, #contact-form input, #message {
+    background-color: var(--contact-bg-color);
+    border-color: var(--contact-border-color);
+    color: var(--contact-font-color);
+}
+
+#contact-form :focus{
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+/*****************************/
+/* REQUIREMENTS FORM *********/
+
+.accordion{
+    --bs-accordion-btn-bg:#A8D08D;
+    --bs-accordion-active-bg: #29432b;
+    --bs-accordion-active-color: #ffffff;
+    --bs-accordion-bg: var(--bs-accordion-bg-two);
+    --bs-accordion-btn-focus-border-color: unset;
+    --bs-accordion-color: var(--bs-accordion-color-two);
+    --bs-accordion-border-width: 1px;
+    --bs-accordion-border-style: solid;
+    --bs-accordion-border-color: black;
+}
+
+.reqs_border {
+    border: 3px solid #A8D08D;
+    border-radius: 8px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/*****************************/
+/* SURVEY FORM ***************/
+
+#survey-form-container h1 {
+    font-size: 26px;
+}
+
+#survey-form label {
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-radius: 12px 12px 0 0;
+}
+
+#survey-form input {
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+    border: 1px solid;
+}
+
+.slider {
+    padding: 16px;
+    height: 56px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #69b344;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    background-color: #69b344;
+}
+
+#survey-form sub{
+    font-size: calc(7px + .75vw);
+}
+
+#survey-form .rangeValue{
+    color: var(--score-color);
+}
+
+.required:after {
+    content: '*';
+    color: #c00b0b;
+}
+
+#survey-form textarea {
+    resize: none;
+    border-radius: 0 0 12px 12px;
+}
+
+#survey-form label, #survey-form input, #survey-form textarea, #survey-form select {
+    background-color: var(--contact-bg-color);
+    border-color: var(--contact-border-color);
+    color: var(--contact-font-color);
+}
+
+#experience-card {
+    background-color: var(--experience-bg-color);
+    border-color: var(--experience-border-color);
+    color: var(--experience-font-color);
+}
+
+
+#experience-form-link {
+    text-decoration: none;
+}
+
+.caution {
+    height: 3em;
+    display: inline;
+}
+
+#survey-form :focus{
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+/*****************************/
+/* SURVEY RECEIPT ************/
+
+#receipt-div {
+    max-width: 700px;
+    border-radius: 12px;
+    background-color: var(--receipt-bg-color);
+    border-color: var(--experience-border-color);
+    color: var(--experience-font-color);
+}
+
+.blue {
+    background-color: #00c4ff;
+}
+
+.green {
+    background-color: #429b42;
+}
+
+.red {
+    background-color: #cb3e3e;
+}
+
+.orange {
+    background-color: orange;
+}
+
+#receipt-code {
+    min-width: 120px;
+    max-width: 600px;
+    border-radius: 12px
+}
+
+/*****************************/
+/* SURVEY CONFIRM ************/
+
+#confirm-div {
+    max-width: 700px;
+    border-radius: 12px;
+    background-color: var(--receipt-bg-color);
+    border-color: var(--experience-border-color);
+    color: var(--experience-font-color);
+}
+
+/*****************************/
+/* Viewentries RECEIPT ************/
+
+.dropdown-btns{
+    color: var(--experience-font-color); 
+    padding-bottom: 5px;
+    height: 25px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+.dropdown-menu{
+    background-color: var(--receipt-bg-color);
+    border-color: var(--experience-border-color);
+}
+.card{
+    border-radius: 12px;
+    background-color: var(--receipt-bg-color);
+    border-color: var(--experience-border-color);
+    color: var(--experience-font-color);
+}
+th{
+    border-bottom: solid var(--table-seperator-color) 3px;
+    vertical-align: bottom;
+    padding: 0px 0px 3px 0px;
+}
+tr{
+    text-align: center;
+}
+.narrowdiv th{
+    border-bottom: solid var(--table-seperator-color) 2px;
+    vertical-align: bottom;
+    padding: 0px 0px 3px 0px;
+    margin-bottom: 2px;
+}
+.tinydiv th{
+    border-bottom: solid var(--table-seperator-color) 1px;
+    vertical-align: bottom;
+    padding: 0 0 3px 0;
+    margin-bottom: 2px;
+    font-size: 11px;
+}
+.modal-content{
+    background-color: var(--receipt-bg-color);
+    border-color: var(--experience-border-color);
+    color: var(--experience-font-color); 
+}
+.comment_column_data{
+    width: 48px;
+    height: 24px;
+    font-size:10px;
+    vertical-align: middle;
+}
+/*.modal-backdrop{*/
+/*    z-index:100;*/
+/*}*/
+
+/*.modal{*/
+/*    display: block;*/
+/*    height: 0;*/
+/*    overflow: visible;*/
+/*}*/
+
+
+
+
+
